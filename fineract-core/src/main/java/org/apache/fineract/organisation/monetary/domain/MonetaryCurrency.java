@@ -48,7 +48,7 @@ public class MonetaryCurrency {
 
     public MonetaryCurrency copy() {
         return new MonetaryCurrency(this.code, this.digitsAfterDecimal, this.inMultiplesOf);
-        // efderfref
+        // efderfrefede
     }
 
     public static MonetaryCurrency fromApplicationCurrency(ApplicationCurrency applicationCurrency) {
