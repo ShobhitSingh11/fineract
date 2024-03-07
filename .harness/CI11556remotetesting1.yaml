@@ -8,7 +8,7 @@ pipeline:
     ci:
       codebase:
         connectorRef: org.ssbucketprivate
-        repoName: scm/har/akhil-scm.git
+        repoName: scm/har/naman-test.git
         build: <+input>
   stages:
     - stage:
