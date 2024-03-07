@@ -7,7 +7,8 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: org.SSBitbucket
+        connectorRef: org.ssbucketprivate
+        repoName: scm/har/akhil-scm.git
         build: <+input>
   stages:
     - stage:
