@@ -7,7 +7,8 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: org.CI11556Public
+        connectorRef: org.CI11556
+        repoName: scm/har/naman-test.git
         build: <+input>
   stages:
     - stage:
