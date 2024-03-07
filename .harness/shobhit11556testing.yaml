@@ -1,0 +1,14 @@
+inputSet:
+  name: shobhit-11556-testing
+  identifier: shobhit11556testing
+  orgIdentifier: default
+  projectIdentifier: ShobhitTesting
+  pipeline:
+    identifier: CI11556Remote
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
