@@ -1,0 +1,15 @@
+inputSet:
+  name: ss-new-input
+  identifier: ssnewinput
+  orgIdentifier: default
+  projectIdentifier: Test
+  pipeline:
+    identifier: CI11556
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
+  object Object: pipeline.properties.ci.codebase
