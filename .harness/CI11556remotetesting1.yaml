@@ -1,0 +1,41 @@
+pipeline:
+  name: CI-11556-remote-testing-1
+  identifier: CI11556remotetesting1
+  projectIdentifier: ShobhitTesting
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: org.ssbucketprivate
+        repoName: scm/har/naman-test.git
+        build: <+input>
+  stages:
+    - stage:
+        name: CI
+        identifier: CI
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: alpine
+                    shell: Sh
+                    command: echo "hello fefewde3de"
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: account.k8s
+              namespace: harness-delegate-ng
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux

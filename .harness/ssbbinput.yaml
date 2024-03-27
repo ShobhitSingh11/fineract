@@ -1,0 +1,15 @@
+inputSet:
+  name: ss-bb-input
+  identifier: ssbbinput
+  orgIdentifier: default
+  projectIdentifier: Test
+  pipeline:
+    identifier: CI11556remotetest
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
+  object Object: pipeline.properties.ci.codebase
